@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170217 16:48:13.838" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="E:\GobearTest\GobearRegression\GobearVN.txt" id="s1" name="GobearVN">
+<test id="s1-t1" name="CC-homepag-MainFlow">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://gobear.com/vn</arg>
+<arg>browser=googlechrome</arg>
+</arguments>
+<assign>
+<var>${CurrentBrowserID}</var>
+</assign>
+<msg timestamp="20170217 16:48:13.944" level="INFO">Opening browser 'googlechrome' to base url 'https://gobear.com/vn'</msg>
+<msg timestamp="20170217 16:48:23.083" level="INFO">${CurrentBrowserID} = 1</msg>
+<status status="PASS" endtime="20170217 16:48:23.083" starttime="20170217 16:48:13.944"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${HomepageTitle}</arg>
+</arguments>
+<msg timestamp="20170217 16:48:23.136" level="INFO">Current page contains text 'Mọi sự so sánh'.</msg>
+<status status="PASS" endtime="20170217 16:48:23.136" starttime="20170217 16:48:23.085"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//label[@ng-if="item.name == 'cashback'"]</arg>
+</arguments>
+<msg timestamp="20170217 16:48:23.137" level="INFO">Clicking element '//label[@ng-if="item.name == 'cashback'"]'.</msg>
+<status status="PASS" endtime="20170217 16:48:23.243" starttime="20170217 16:48:23.136"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//label[@ng-if="item.name == 'miles'"]</arg>
+</arguments>
+<msg timestamp="20170217 16:48:23.244" level="INFO">Clicking element '//label[@ng-if="item.name == 'miles'"]'.</msg>
+<status status="PASS" endtime="20170217 16:48:23.316" starttime="20170217 16:48:23.243"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//input[@ng-model="criteria.totalSpendingPerMonth"]</arg>
+<arg>${Spending}</arg>
+</arguments>
+<msg timestamp="20170217 16:48:23.317" level="INFO">Typing text '11000000' into text field '//input[@ng-model="criteria.totalSpendingPerMonth"]'</msg>
+<status status="PASS" endtime="20170217 16:48:23.478" starttime="20170217 16:48:23.316"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//input[@ng-model="criteria.income"]</arg>
+<arg>${Income}</arg>
+</arguments>
+<msg timestamp="20170217 16:48:23.481" level="INFO">Typing text '33000000' into text field '//input[@ng-model="criteria.income"]'</msg>
+<status status="PASS" endtime="20170217 16:48:23.598" starttime="20170217 16:48:23.479"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects `*values` from list identified by `locator`</doc>
+<arguments>
+<arg>//select[@id='city']</arg>
+<arg>${City}</arg>
+</arguments>
+<msg timestamp="20170217 16:48:23.599" level="INFO">Selecting value(s) '1' from list '//select[@id='city']'.</msg>
+<status status="PASS" endtime="20170217 16:48:23.714" starttime="20170217 16:48:23.599"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>//a[@ng-click="reset();trackClearAll();"]</arg>
+</arguments>
+<msg timestamp="20170217 16:48:23.716" level="INFO">Clicking link '//a[@ng-click="reset();trackClearAll();"]'.</msg>
+<status status="PASS" endtime="20170217 16:48:23.821" starttime="20170217 16:48:23.715"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20170217 16:48:24.822" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170217 16:48:24.822" starttime="20170217 16:48:23.821"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//button[@ng-click="submit();trackInteraction('Credit-CompareNow');"]</arg>
+</arguments>
+<msg timestamp="20170217 16:48:24.826" level="INFO">Clicking element '//button[@ng-click="submit();trackInteraction('Credit-CompareNow');"]'.</msg>
+<status status="PASS" endtime="20170217 16:48:26.989" starttime="20170217 16:48:24.826"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//a[@ng-click="buy(item)"]</arg>
+</arguments>
+<status status="PASS" endtime="20170217 16:48:28.756" starttime="20170217 16:48:26.989"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//a[@ng-click="buy(item)"][1]</arg>
+</arguments>
+<msg timestamp="20170217 16:48:28.757" level="INFO">Clicking element '//a[@ng-click="buy(item)"][1]'.</msg>
+<status status="PASS" endtime="20170217 16:48:28.908" starttime="20170217 16:48:28.757"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20170217 16:48:29.410" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" endtime="20170217 16:48:29.410" starttime="20170217 16:48:28.910"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>Forward Loading</arg>
+</arguments>
+<assign>
+<var>${CurrentBrowserID}</var>
+</assign>
+<msg timestamp="20170217 16:48:30.618" level="INFO">${CurrentBrowserID} = CDwindow-8befd329-587f-4278-a266-fa717616db2f</msg>
+<status status="PASS" endtime="20170217 16:48:30.618" starttime="20170217 16:48:29.412"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Bạn đã gần như hoàn tất!</arg>
+</arguments>
+<msg timestamp="20170217 16:48:30.642" level="INFO">Current page contains text 'Bạn đã gần như hoàn tất!'.</msg>
+<status status="PASS" endtime="20170217 16:48:30.642" starttime="20170217 16:48:30.619"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170217 16:48:31.847" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170217 16:48:31.848" starttime="20170217 16:48:30.642"></status>
+</kw>
+<status status="PASS" endtime="20170217 16:48:31.848" critical="yes" starttime="20170217 16:48:13.943"></status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170217 16:48:35.036" starttime="20170217 16:48:31.851"></status>
+</kw>
+<status status="PASS" endtime="20170217 16:48:35.037" starttime="20170217 16:48:13.840"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="GobearVN" pass="1">GobearVN</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
